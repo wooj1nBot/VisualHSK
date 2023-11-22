@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.release.visualhsk.HomeFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#FFF073">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/pd_medium"
+                        android:paddingStart="20dp"
+                        android:text="학습하기"
+                        android:textColor="#202020"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="10dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="15dp"
+                        android:src="@drawable/settings" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="30dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cd1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="110dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="1dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginStart="15dp"
+                                        android:layout_weight="1"
+                                        android:src="@drawable/recent" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="25dp"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/pd_medium"
+                                        android:text="이어서 보기"
+                                        android:textColor="#202020"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/level"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginEnd="15dp"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/pd_regu"
+                                        android:gravity="center"
+                                        android:text="1급"
+                                        android:textColor="#707070"
+                                        android:textSize="14sp" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="false"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginEnd="15dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/word"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:fontFamily="@font/pd_regu"
+                                            android:text="认识"
+                                            android:textColor="#202020"
+                                            android:textSize="13sp" />
+
+                                        <TextView
+                                            android:id="@+id/word2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_horizontal"
+                                            android:fontFamily="@font/pd_regu"
+                                            android:text="[ rèn‧shi ]"
+                                            android:textColor="#202020"
+                                            android:textSize="12sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cd2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="110dp"
+                            android:clickable="true"
+                            android:layout_marginStart="20dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="1dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginStart="15dp"
+                                        android:layout_weight="1"
+                                        android:padding="3dp"
+                                        android:src="@drawable/review" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="25dp"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/pd_medium"
+                                        android:text="복습하기"
+                                        android:textColor="#202020"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/review"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginEnd="15dp"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/pd_regu"
+                                        android:gravity="center"
+                                        android:paddingStart="10dp"
+                                        android:paddingEnd="10dp"
+                                        android:text="0개의 복습 문제"
+                                        android:textColor="#707070"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cd3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="110dp"
+                            android:layout_marginStart="20dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="1dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginStart="15dp"
+                                        android:layout_weight="1"
+                                        android:src="@drawable/star" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="25dp"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/pd_medium"
+                                        android:text="별표 친 단어"
+                                        android:textColor="#202020"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/star"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginEnd="15dp"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/pd_regu"
+                                        android:gravity="center"
+                                        android:text="0개의 단어"
+                                        android:textColor="#707070"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cd4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="110dp"
+                            android:layout_marginStart="20dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="1dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="20dp"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginStart="15dp"
+                                        android:layout_weight="1"
+                                        android:padding="3dp"
+                                        android:src="@drawable/wrong" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="25dp"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/pd_medium"
+                                        android:text="틀린 단어"
+                                        android:textColor="#202020"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/wrong"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_marginStart="20dp"
+                                        android:layout_marginEnd="15dp"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/pd_regu"
+                                        android:gravity="center"
+                                        android:text="0개의 단어"
+                                        android:textColor="#707070"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp" />
+    </LinearLayout>
+</RelativeLayout>

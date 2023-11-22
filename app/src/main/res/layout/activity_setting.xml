@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.release.visualhsk.SettingActivity">
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:background="#F6F6F6"
+        app:umanoDragView="@id/drawer"
+        app:umanoPanelHeight="0dp"
+        app:umanoOverlay="true"
+        app:umanoShadowHeight="0dp">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="12dp"
+                    app:srcCompat="@drawable/arrow_back" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/pd_light"
+                    android:text="설정"
+                    android:textColor="#2E2E2E"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/pd_regu"
+                android:text="복습하기 팝업"
+                android:textColor="#3C3C3C"
+                android:textSize="16sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0.5dp">
+
+                <RadioGroup
+                    android:id="@+id/rg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pd_regu"
+                                android:text="앱 시작시 팝업 표시"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/pd_light"
+                                android:text="앱을 실행하면 복습하기 팝업을 표시합니다."
+                                android:textColor="#3C3C3C"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <RadioButton
+                            android:id="@+id/r1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/main"
+                            android:onClick="onClick"
+                            />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#CBCBCB" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pd_regu"
+                                android:text="팝업 시간 설정하기"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/pd_light"
+                                android:text="특정한 시간에 복습하기 팝업이 표시됩니다."
+                                android:textColor="#3C3C3C"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <RadioButton
+                            android:id="@+id/r2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:onClick="onClick"
+                            />
+                    </LinearLayout>
+
+                    <TimePicker
+                        android:id="@+id/timepicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:theme="@style/RYZZE_DATE_PICKER"
+                        android:timePickerMode="spinner"
+                        android:visibility="visible" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#CBCBCB" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pd_regu"
+                                android:text="팝업 끄기"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/pd_light"
+                                android:text="모든 팝업을 끕니다."
+                                android:textColor="#3C3C3C"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <RadioButton
+                            android:id="@+id/r3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:onClick="onClick"
+                            />
+                    </LinearLayout>
+
+                </RadioGroup>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/pd_regu"
+                android:text="학습하기"
+                android:textColor="#3C3C3C"
+                android:textSize="16sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="40dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pd_regu"
+                                android:text="오답노트 완료 횟수"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/pd_light"
+                                android:text="오답노트를 완료하기 위한 정답 횟수를 설정합니다."
+                                android:textColor="#3C3C3C"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/sp1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="15dp"
+                            android:background="@drawable/stroke"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp">
+
+                            <TextView
+                                android:id="@+id/sp_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/pd_regu"
+                                android:text="5회"
+                                android:textColor="#3C3C3C"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/spinner" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#CBCBCB" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pd_regu"
+                                android:text="복습 완료 기간"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/pd_light"
+                                android:text="복습을 완료할 연속 정답 기간을 설정합니다."
+                                android:textColor="#3C3C3C"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/sp2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="15dp"
+                            android:background="@drawable/stroke"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp">
+
+                            <TextView
+                                android:id="@+id/sp_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/pd_regu"
+                                android:text="5회"
+                                android:textColor="#3C3C3C"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/spinner" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#CBCBCB" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pd_regu"
+                                android:text="테스트 시간 제한 설정"
+                                android:textColor="#000000" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/pd_light"
+                                android:text="단어 시험의 시간 제한을 설정합니다."
+                                android:textColor="#3C3C3C"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/sp3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="15dp"
+                            android:background="@drawable/stroke"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp">
+
+                            <TextView
+                                android:id="@+id/sp_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/pd_regu"
+                                android:text="5회"
+                                android:textColor="#3C3C3C"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/spinner" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="40dp"
+                app:cardCornerRadius="10dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardElevation="0.5dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pd_regu"
+                        android:text="로그아웃 하기"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/pd_light"
+                        android:text="현재 로그인된 계정을 로그아웃합니다."
+                        android:textColor="#3C3C3C"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/drawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/done"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/pd_regu"
+                    android:gravity="center_vertical|end"
+                    android:paddingEnd="30dp"
+                    android:text="완료"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="#444444"
+                    android:textSize="16sp" />
+
+                <NumberPicker
+                    android:id="@+id/picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="80dp"
+                    android:theme="@style/RYZZE_DATE_PICKER">
+                </NumberPicker>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+</RelativeLayout>

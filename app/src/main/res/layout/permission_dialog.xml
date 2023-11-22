@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:visibility="visible">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/pd_regu"
+                android:text="권한 필요"
+                android:textColor="#222222"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView12"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/pd_regu"
+                android:gravity="center"
+                android:lineSpacingExtra="8sp"
+                android:text="팝업 표시를 위해\n다른 앱에서 그리기 권한을 허용해야 합니다."
+                android:textColor="#3C3C3C"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView6"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/ok"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="false"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="25dp"
+                    app:cardBackgroundColor="#FBE94F"
+                    app:strokeWidth="0dp">
+
+                    <TextView
+                        android:id="@+id/tvok"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginEnd="35dp"
+                        android:fontFamily="@font/pd_regu"
+                        android:gravity="center"
+                        android:text="활성화"
+                        android:textColor="#3C3C3C"
+                        android:textSize="16sp"
+                      />
+
+                </com.google.android.material.card.MaterialCardView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

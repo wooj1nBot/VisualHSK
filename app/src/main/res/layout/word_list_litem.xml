@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="0.6dp"
+        android:background="#D6D6D6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+            >
+
+            <TextView
+                android:id="@+id/position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/pd_light"
+                android:gravity="center"
+                android:text="1급"
+                android:textColor="#707070"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:alpha="0.8"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/check"
+                app:tint="#4CAF50" />
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="false"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/pd_regu"
+                android:singleLine="true"
+                android:text="认识认识"
+                android:textColor="#202020"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/pd_light"
+                android:singleLine="true"
+                android:text="[ rèn‧shi ]"
+                android:textColor="#707070"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/pd_regu"
+            android:singleLine="true"
+            android:text="알다|인식하다|인식"
+            android:textColor="#3C3C3C"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            app:srcCompat="@drawable/star_on"
+            app:tint="#F3DA09" />
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            app:srcCompat="@drawable/wong" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

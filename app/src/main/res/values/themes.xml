@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.VisualHSK" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/main</item>
+        <item name="colorControlActivated">@android:color/holo_red_light</item>
+        //black is the color of the normal state
+        <item name="colorControlNormal">@android:color/black</item>
+    </style>
+
+    <style name="Theme.VisualHSK" parent="Base.Theme.VisualHSK" />
+
+    <style name="radioButton" parent="AppTheme">
+        <item name="colorControlNormal">#222222</item>
+        <item name="colorAccent">#f00</item>
+    </style>
+
+    <style name="RYZZE_DATE_PICKER">
+        <item name="android:colorControlNormal">@color/main</item>
+        <item name="android:fontFamily">@font/pd_regu</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

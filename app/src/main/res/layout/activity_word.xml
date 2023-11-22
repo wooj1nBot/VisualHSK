@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.release.visualhsk.WordActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="-5dp"
+            app:cardBackgroundColor="@color/main"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="10dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="12dp"
+                        app:srcCompat="@drawable/arrow_back" />
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/pd_light"
+                        android:text="HSK 1급"
+                        android:textColor="#2E2E2E"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/readview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="false"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="25dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:layout_weight="1"
+                            android:tint="#585858"
+                            app:srcCompat="@drawable/read2" />
+
+                        <TextView
+                            android:id="@+id/read"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pd_medium"
+                            android:text="3"
+                            android:textColor="#3C3C3C"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/word"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/pd_regu"
+                            android:gravity="center"
+                            android:lineSpacingExtra="8sp"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:text="认识"
+                            android:textColor="#202020"
+                            android:textSize="48sp" />
+
+                        <TextView
+                            android:id="@+id/word2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/pd_regu"
+                            android:text="[ rèn‧shi ]"
+                            android:textColor="#202020"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/star"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="false"
+                        android:layout_marginStart="20dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/star_off" />
+
+                    <ImageView
+                        android:id="@+id/check"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="false"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/star"
+                        android:padding="3dp"
+                        app:srcCompat="@drawable/check"
+                        app:tint="#0066FF" />
+
+                    <ImageView
+                        android:id="@+id/tts"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="20dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/volume_up" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/count4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:fontFamily="@font/pd_regu"
+                android:lineSpacingExtra="4sp"
+                android:paddingStart="20dp"
+                android:text="마지막으로 읽은 날짜 \n3dnjf 2dndj"
+                android:textColor="#686868"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:fontFamily="@font/pd_regu"
+                android:gravity="end"
+                android:paddingEnd="25dp"
+                android:text="50  /  301"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/pd_regu"
+            android:paddingStart="25dp"
+            android:text="뜻, 풀이"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/mean"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/pd_light"
+            android:lineSpacingExtra="8sp"
+            android:paddingStart="25dp"
+            android:paddingTop="20dp"
+            android:paddingEnd="25dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/pd_light"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="8sp"
+                android:text="공부하면서 이것저것 다른 일을 할 수록 뇌는 산만해져\n공부한 걸 기억할 확률이 현저히 낮아집니다."
+                android:textColor="#444444"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/pd_regu"
+                android:gravity="center_horizontal"
+                android:text="연속공부시간"
+                android:textColor="#3c3c3c"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/pd_regu"
+                android:gravity="center_horizontal"
+                android:text="00:12:32"
+                android:textColor="#3C3C3C"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="35dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/list"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="25dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="#CACACA"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp"
+                    app:srcCompat="@drawable/format_list_bulleted" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="25dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/prev"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/main"
+                    app:cardCornerRadius="10dp"
+                    app:cardUseCompatPadding="false">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="25dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/arrow_left_ios" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pd_regu"
+                            android:text="이전"
+                            android:textColor="#3E3E3E"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/next"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/main"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="25dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/pd_regu"
+                            android:text="다음"
+                            android:textColor="#3E3E3E"
+                            android:textSize="18sp" />
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            app:srcCompat="@drawable/arrow_right_ios" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
